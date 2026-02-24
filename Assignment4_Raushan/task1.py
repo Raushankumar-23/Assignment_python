@@ -11,35 +11,22 @@ Problem Statement:  Write a Python program that:
 """
 
 try:
-    file = open("sample.txt","r")
+    with open("sample.txt", "r") as file:
+        print("File exists\n")
 
-except:
-    print("file does not exist") # file not exist execute
+        # Print line by line
+        for line in file:
+            print(line.strip())
 
-else:
-    print("file is exists")
+        # Reset cursor
+        file.seek(0)
+
+        print("\nWord by word:")
+        for word in file.read().split():
+            print(word)
+
+except FileNotFoundError:
+    print("File does not exist")
+
 finally:
-    print("thank") # its always execute
-
-# content = file.read() # read full content
-# print(content)
-
-# print(file.tell())
-# file.seek(0)         # cursur reset initial point
-
-count = len(file.readlines())
-for con in range(0,count):
-    print(file.readline())
-
-print(file.tell())
-file.seek(0)         # cursur reset initial point
-
-content1 = file.readline().split() # read content  word by word
-for con in content1:
-    print(con)
-
-file.seek(0)
-
-
-
-file.close()
+    print("\nThank you")
