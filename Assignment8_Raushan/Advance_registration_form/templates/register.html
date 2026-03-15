@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Registration Form</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<form action="/confirmation" method="post">
+
+<h2>Student Registration Form</h2>
+
+<h3>Basic Personal Information</h3>
+
+<label>First Name</label>
+<input type="text" name="firstname">
+
+<label>Last Name</label>
+<input type="text" name="lastname">
+
+<label>Username</label>
+<input type="text" name="username">
+
+<label>Email</label>
+<input type="email" name="email">
+
+<label>Password</label>
+<input type="password" name="password">
+
+<label>Confirm Password</label>
+<input type="password" name="confirm_password">
+
+<h3>Contact Information</h3>
+
+<label>Mobile Number</label>
+<input type="text" name="mobile">
+
+<label>Address</label>
+<input type="text" name="address">
+
+<label>City</label>
+<input type="text" name="city">
+
+<label>State</label>
+<input type="text" name="state">
+
+<label>Pincode</label>
+<input type="number" name="pincode">
+
+<h3>Personal Details</h3>
+
+<label>Date of Birth</label>
+<input type="date" name="dob">
+
+<label>Gender</label>
+<select name="gender">
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+
+<label>Nationality</label>
+<input type="text" name="nationality">
+
+<h3>Academic Information</h3>
+
+<label>Course</label>
+<select name="course">
+<option>BCA</option>
+<option>B.Tech</option>
+<option>MCA</option>
+</select>
+
+<label>Department</label>
+<input type="text" name="department">
+
+<label>Roll Number</label>
+<input type="text" name="rollnumber">
+
+<label>College Name</label>
+<input type="text" name="college">
+
+<h3>Security Fields</h3>
+
+<label>Security Question</label>
+<select name="security_question">
+<option>What is your pet name?</option>
+<option>What is your favorite color?</option>
+<option>What is your birthplace?</option>
+</select>
+
+<label>Security Answer</label>
+<input type="text" name="security_answer">
+
+<br><br>
+
+<input type="submit" value="Register">
+<input type="reset" value="Reset">
+
+</form>
+
+</body>
+</html>
